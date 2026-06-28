@@ -322,3 +322,283 @@ id="page3">
 <p class="typing"
 id="typingText">
 </p>
+<button class="next-btn"
+onclick="nextPage(4)">
+Continue ❤️
+</button>
+
+</div>
+</div>
+
+<!-- PAGE 4 -->
+
+<div class="page"
+id="page4">
+
+<div class="glass">
+
+<h1>Can You Forgive Me? 🥺</h1>
+
+<p>
+Rabiii ❤️<br><br>
+I truly regret hurting you.
+You are really special to me.
+Can we make things right again?
+</p>
+
+<div class="buttons">
+
+<button class="yes"
+onclick="yesClicked()">
+Yes ❤️
+</button>
+
+<button class="no"
+id="noBtn">
+No 😢
+</button>
+
+</div>
+
+</div>
+</div>
+
+<!-- PAGE 5 -->
+
+<div class="page final"
+id="page5">
+
+<div class="glass">
+
+<h1>
+Thank You Rabiii ❤️🥹
+</h1>
+
+<p>
+You made my heart smile again 💖<br><br>
+I promise to do better,
+care more,
+and never stop loving
+the moments we share ❤️
+</p>
+
+</div>
+
+</div>
+
+<script>
+
+function nextPage(pageNo){
+
+document
+.querySelectorAll(".page")
+.forEach(p =>
+p.classList.remove("active")
+);
+
+document
+.getElementById(
+"page"+pageNo
+)
+.classList.add("active");
+
+}
+
+/* TYPEWRITER */
+
+const text =
+`Rabiii ❤️,
+
+I'm truly sorry
+for hurting you.
+
+That was never
+my intention.
+
+You mean so much to me,
+and every moment
+without talking to you
+feels incomplete.
+
+I miss your smile,
+your presence,
+and the happiness
+you bring.
+
+Please forgive me
+and give us
+another chance ❤️`;
+
+let i = 0;
+
+function typeWriter(){
+
+if(i < text.length){
+
+document
+.getElementById(
+"typingText"
+)
+innerHTML +=
+text.charAt(i);
+
+i++;
+
+setTimeout(
+typeWriter,
+40
+);
+
+}
+
+}
+
+document
+.querySelector(
+'.next-btn'
+)
+.addEventListener(
+'click',
+()=>{
+setTimeout(
+typeWriter,
+500
+);
+}
+);
+
+/* MUSIC */
+
+function toggleMusic(){
+
+const music =
+document
+.getElementById(
+"music"
+);
+
+if(music.paused){
+
+music.play();
+
+}else{
+
+music.pause();
+
+}
+
+}
+
+/* NO BUTTON ESCAPE */
+
+const noBtn =
+document
+.getElementById(
+"noBtn"
+);
+
+noBtn
+.addEventListener(
+"mouseover",
+()=>{
+
+const x =
+Math.random()*200
+-100;
+
+const y =
+Math.random()*150
+-80;
+
+noBtn.style
+.transform =
+`translate(
+${x}px,
+${y}px
+)`;
+
+}
+);
+
+/* YES CLICK */
+
+function yesClicked(){
+
+nextPage(5);
+
+setInterval(
+createHeart,
+150
+);
+
+}
+
+/* HEART RAIN */
+
+function createHeart(){
+
+const heart =
+document
+.createElement(
+"div"
+);
+
+heart
+.classList
+.add("heart");
+
+heart.innerHTML =
+"❤️";
+
+heart.style.left =
+Math.random()*100
++"vw";
+
+heart.style.fontSize =
+(Math.random()*20
++20)+"px";
+
+document.body
+.appendChild(
+heart
+);
+
+setTimeout(
+()=>{
+heart.remove();
+},
+5000
+);
+
+}
+
+/* PHOTO SLIDER */
+
+let index = 0;
+
+setInterval(()=>{
+
+const slides =
+document
+.getElementById(
+"slides"
+);
+
+index++;
+
+if(index > 4){
+index = 0;
+}
+
+slides.style
+.transform =
+`translateX(
+-${index*100}%
+)`;
+
+},2500);
+
+</script>
+
+</body>
+</html>
