@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -601,4 +602,609 @@ slides.style
 </script>
 
 </body>
+=======
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport"
+content="width=device-width, initial-scale=1.0">
+
+<title>Dear Rabiii ❤️</title>
+
+<link rel="preconnect"
+href="https://fonts.googleapis.com">
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap"
+rel="stylesheet">
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:'Poppins',sans-serif;
+}
+
+body{
+overflow:hidden;
+background:linear-gradient(
+135deg,
+#ff758c,
+#ff7eb3,
+#ffb6c1,
+#ffd1dc
+);
+height:100vh;
+background-size:400% 400%;
+animation:bgMove 12s ease infinite;
+}
+
+@keyframes bgMove{
+0%{background-position:0% 50%;}
+50%{background-position:100% 50%;}
+100%{background-position:0% 50%;}
+}
+
+.page{
+position:absolute;
+width:100%;
+height:100vh;
+display:none;
+justify-content:center;
+align-items:center;
+padding:20px;
+text-align:center;
+}
+
+.active{
+display:flex;
+flex-direction:column;
+animation:fade .8s ease;
+}
+
+@keyframes fade{
+from{
+opacity:0;
+transform:translateY(20px);
+}
+to{
+opacity:1;
+transform:translateY(0);
+}
+}
+
+.glass{
+background:rgba(255,255,255,0.15);
+backdrop-filter:blur(15px);
+padding:30px;
+border-radius:30px;
+box-shadow:0 8px 30px rgba(0,0,0,.2);
+width:90%;
+max-width:420px;
+color:white;
+}
+
+h1{
+font-size:38px;
+margin-bottom:15px;
+}
+
+p{
+line-height:1.8;
+font-size:18px;
+}
+
+button{
+margin-top:20px;
+padding:14px 28px;
+border:none;
+border-radius:16px;
+font-size:18px;
+cursor:pointer;
+transition:.3s;
+font-weight:bold;
+}
+
+.next-btn{
+background:#ff4f8b;
+color:white;
+}
+
+.next-btn:hover{
+transform:scale(1.08);
+}
+
+.music-btn{
+position:fixed;
+top:20px;
+right:20px;
+background:white;
+border:none;
+width:55px;
+height:55px;
+border-radius:50%;
+font-size:24px;
+cursor:pointer;
+z-index:999;
+}
+
+.heart{
+position:absolute;
+color:red;
+animation:float 5s linear infinite;
+pointer-events:none;
+}
+
+@keyframes float{
+0%{
+transform:translateY(0);
+opacity:1;
+}
+100%{
+transform:translateY(-100vh);
+opacity:0;
+}
+}
+
+/* PAGE 1 */
+
+.envelope{
+width:220px;
+height:140px;
+background:#ff4d88;
+border-radius:10px;
+margin:auto;
+position:relative;
+cursor:pointer;
+box-shadow:0 10px 25px rgba(0,0,0,.3);
+transition:.5s;
+}
+
+.envelope:hover{
+transform:scale(1.05);
+}
+
+.envelope:before{
+content:'';
+position:absolute;
+top:0;
+left:0;
+width:0;
+height:0;
+border-left:110px solid transparent;
+border-right:110px solid transparent;
+border-top:80px solid #ff8ab5;
+}
+
+/* PAGE 2 */
+
+.slider{
+width:100%;
+overflow:hidden;
+border-radius:20px;
+margin-top:20px;
+}
+
+.slides{
+display:flex;
+transition:transform .5s ease;
+}
+
+.slides img{
+width:100%;
+height:350px;
+object-fit:cover;
+border-radius:20px;
+}
+
+/* PAGE 4 */
+
+.buttons{
+display:flex;
+justify-content:center;
+gap:20px;
+position:relative;
+margin-top:25px;
+height:100px;
+}
+
+.yes{
+background:#00e676;
+color:white;
+}
+
+.no{
+background:#ff1744;
+color:white;
+position:absolute;
+right:20px;
+color:white;
+}
+
+/* FINAL */
+
+.final h1{
+font-size:50px;
+}
+
+.typing{
+min-height:180px;
+white-space:pre-line;
+}
+
+</style>
+</head>
+
+<body>
+
+<button class="music-btn"
+onclick="toggleMusic()">
+🎵
+</button>
+
+<audio id="music" loop>
+<source src="music.mp3"
+type="audio/mpeg">
+</audio>
+
+<!-- PAGE 1 -->
+
+<div class="page active"
+id="page1">
+
+<div class="glass">
+
+<div class="envelope"
+onclick="nextPage(2)">
+</div>
+
+<h1>Dear Rabiii ❤️</h1>
+
+<p>
+I have something special
+to tell you...
+</p>
+
+<p>
+Tap the letter 💌
+</p>
+
+</div>
+</div>
+
+<!-- PAGE 2 -->
+
+<div class="page"
+id="page2">
+
+<div class="glass">
+
+<h1>Our Memories 📸</h1>
+
+<p>
+Every memory with you
+means everything to me ❤️
+</p>
+
+<div class="slider">
+
+<div class="slides"
+id="slides">
+
+<img src="https://images.unsplash.com/photo-1516589178581-6cd7833ae3b2">
+
+<img src="https://images.unsplash.com/photo-1518199266791-5375a83190b7">
+
+<img src="https://images.unsplash.com/photo-1517841905240-472988babdf9">
+
+<img src="https://images.unsplash.com/photo-1511988617509-a57c8a288659">
+
+<img src="https://images.unsplash.com/photo-1516589091380-5d8e87df6999">
+
+</div>
+
+</div>
+
+<button class="next-btn"
+onclick="nextPage(3)">
+Next ❤️
+</button>
+
+</div>
+</div>
+
+<!-- PAGE 3 -->
+
+<div class="page"
+id="page3">
+
+<div class="glass">
+
+<h1>My Apology 💌</h1>
+
+<p class="typing"
+id="typingText">
+</p>
+<button class="next-btn"
+onclick="nextPage(4)">
+Continue ❤️
+</button>
+
+</div>
+</div>
+
+<!-- PAGE 4 -->
+
+<div class="page"
+id="page4">
+
+<div class="glass">
+
+<h1>Can You Forgive Me? 🥺</h1>
+
+<p>
+Rabiii ❤️<br><br>
+I truly regret hurting you.
+You are really special to me.
+Can we make things right again?
+</p>
+
+<div class="buttons">
+
+<button class="yes"
+onclick="yesClicked()">
+Yes ❤️
+</button>
+
+<button class="no"
+id="noBtn">
+No 😢
+</button>
+
+</div>
+
+</div>
+</div>
+
+<!-- PAGE 5 -->
+
+<div class="page final"
+id="page5">
+
+<div class="glass">
+
+<h1>
+Thank You Rabiii ❤️🥹
+</h1>
+
+<p>
+You made my heart smile again 💖<br><br>
+I promise to do better,
+care more,
+and never stop loving
+the moments we share ❤️
+</p>
+
+</div>
+
+</div>
+
+<script>
+
+function nextPage(pageNo){
+
+document
+.querySelectorAll(".page")
+.forEach(p =>
+p.classList.remove("active")
+);
+
+document
+.getElementById(
+"page"+pageNo
+)
+.classList.add("active");
+
+}
+
+/* TYPEWRITER */
+
+const text =
+`Rabiii ❤️,
+
+I'm truly sorry
+for hurting you.
+
+That was never
+my intention.
+
+You mean so much to me,
+and every moment
+without talking to you
+feels incomplete.
+
+I miss your smile,
+your presence,
+and the happiness
+you bring.
+
+Please forgive me
+and give us
+another chance ❤️`;
+
+let i = 0;
+
+function typeWriter(){
+
+if(i < text.length){
+
+document
+.getElementById(
+"typingText"
+)
+innerHTML +=
+text.charAt(i);
+
+i++;
+
+setTimeout(
+typeWriter,
+40
+);
+
+}
+
+}
+
+document
+.querySelector(
+'.next-btn'
+)
+.addEventListener(
+'click',
+()=>{
+setTimeout(
+typeWriter,
+500
+);
+}
+);
+
+/* MUSIC */
+
+function toggleMusic(){
+
+const music =
+document
+.getElementById(
+"music"
+);
+
+if(music.paused){
+
+music.play();
+
+}else{
+
+music.pause();
+
+}
+
+}
+
+/* NO BUTTON ESCAPE */
+
+const noBtn =
+document
+.getElementById(
+"noBtn"
+);
+
+noBtn
+.addEventListener(
+"mouseover",
+()=>{
+
+const x =
+Math.random()*200
+-100;
+
+const y =
+Math.random()*150
+-80;
+
+noBtn.style
+.transform =
+`translate(
+${x}px,
+${y}px
+)`;
+
+}
+);
+
+/* YES CLICK */
+
+function yesClicked(){
+
+nextPage(5);
+
+setInterval(
+createHeart,
+150
+);
+
+}
+
+/* HEART RAIN */
+
+function createHeart(){
+
+const heart =
+document
+.createElement(
+"div"
+);
+
+heart
+.classList
+.add("heart");
+
+heart.innerHTML =
+"❤️";
+
+heart.style.left =
+Math.random()*100
++"vw";
+
+heart.style.fontSize =
+(Math.random()*20
++20)+"px";
+
+document.body
+.appendChild(
+heart
+);
+
+setTimeout(
+()=>{
+heart.remove();
+},
+5000
+);
+
+}
+
+/* PHOTO SLIDER */
+
+let index = 0;
+
+setInterval(()=>{
+
+const slides =
+document
+.getElementById(
+"slides"
+);
+
+index++;
+
+if(index > 4){
+index = 0;
+}
+
+slides.style
+.transform =
+`translateX(
+-${index*100}%
+)`;
+
+},2500);
+
+</script>
+
+</body>
+>>>>>>> 402904015705fdf3b0210b8839e6bc0aa5296247
 </html>
